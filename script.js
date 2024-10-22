@@ -117,30 +117,3 @@ document.getElementById('generateParts').addEventListener('click', function () {
             partsList += 'Gaming Laptop (e.g. Asus ROG with Ryzen 9 5900H and RTX 3070)';
         } else if (buildType === 'handheld') {
             partsList += 'Aya Neo 2021 or other high-performance handhelds';
-        } else if (buildType === 'custom_built_by_others') {
-            partsList += 'Custom high-end build assembled by others: Ryzen 7 5800X, RTX 3060 Ti, 32GB RAM';
-        }
-    } 
-    // Enthusiast (above £2000) builds
-    else {
-        partsList = 'Enthusiast Build: ';
-        if (buildType === 'custom') {
-            if (usage === 'gaming') {
-                partsList += preference === 'amd' 
-                    ? 'Ryzen 9 5900X, Radeon RX 7900 XT' 
-                    : preference === 'amd_am5' 
-                    ? 'Ryzen 9 7950X, Radeon RX 7900 XTX' 
-                    : 'Intel i9-12900K, RTX 4080';
-            } else if (usage === 'videoEditing') {
-                partsList += preference === 'amd_am5' 
-                    ? 'Ryzen 9 7950X, Radeon RX 7900 XTX, 64GB RAM' 
-                    : preference === 'amd' 
-                    ? 'Ryzen 9 5950X, Radeon RX 7900 XT, 64GB RAM' 
-                    : 'Intel i9-12900K, RTX 4080, 64GB RAM';
-            } else if (usage === 'programming') {
-                partsList += 'Intel i9-12900K, Integrated Graphics, 64GB RAM';
-            } else {
-                partsList += 'Ryzen 9 5950X, Integrated Graphics, 64GB RAM';
-            }
-        } else if (buildType === 'prebuilt') {
-            partsList += 'Enthusiast Prebuilt with Intel i9 or Ryzen 9, RTX 4080
