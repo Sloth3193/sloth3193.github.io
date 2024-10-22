@@ -18,4 +18,22 @@
                 <option value="gaming">Gaming</option>
                 <option value="videoEditing">Video Editing</option>
                 <option value="programming">Programming</option>
-                <option value="
+                <option value="generalUse">General Use</option>
+            </select>
+
+            <label for="preference">Do you prefer AMD or Intel?</label>
+            <select id="preference" name="preference" required>
+                <option value="amd">AMD</option>
+                <option value="intel">Intel</option>
+                <option value="noPreference">No Preference</option>
+            </select>
+
+            <button type="button" id="generateParts">Generate Parts List</button>
+            <button type="button" id="sendEmail">Send Email</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
