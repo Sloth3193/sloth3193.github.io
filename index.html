@@ -1,31 +1,61 @@
-<select id="currency">
-    <option value="USD">USD</option>
-    <option value="GBP">GBP</option>
-    <option value="EUR">EUR</option>
-</select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Parts List Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<input type="number" id="budget" placeholder="Enter your budget" />
+    <div class="container">
+        <h1>PC Parts List Generator</h1>
+        
+        <label for="currency">Select Currency:</label>
+        <select id="currency">
+            <option value="USD">$ - US Dollar</option>
+            <option value="GBP">£ - British Pound</option>
+            <option value="EUR">€ - Euro</option>
+            <option value="JPY">¥ - Japanese Yen</option>
+        </select>
 
-<select id="usage">
-    <option value="gaming">Gaming</option>
-    <option value="videoEditing">Video Editing</option>
-    <option value="programming">Programming</option>
-</select>
+        <label for="budget">Enter Budget:</label>
+        <input type="number" id="budget" placeholder="Enter your budget" required>
 
-<select id="preference">
-    <option value="amd">AMD</option>
-    <option value="intel">Intel</option>
-    <option value="amd_am5">AMD AM5</option>
-</select>
+        <label for="usage">What is your main usage?</label>
+        <select id="usage">
+            <option value="gaming">Gaming</option>
+            <option value="videoEditing">Video Editing</option>
+            <option value="programming">Programming</option>
+            <option value="generalUse">General Use</option>
+        </select>
 
-<select id="buildType">
-    <option value="custom">Custom Build</option>
-    <option value="prebuilt">Prebuilt</option>
-    <option value="laptop">Laptop</option>
-    <option value="handheld">Handheld</option>
-    <option value="custom_built_by_others">Custom Built by Others</option>
-</select>
+        <label for="preference">CPU Preference:</label>
+        <select id="preference">
+            <option value="amd">AMD</option>
+            <option value="amd_am5">AMD (AM5)</option>
+            <option value="intel">Intel</option>
+        </select>
 
-<button id="generateParts">Generate Parts List" onclick="generateParts()"</button>
+        <label for="buildType">Select Build Type:</label>
+        <select id="buildType">
+            <option value="custom">Custom Build</option>
+            <option value="prebuilt">Prebuilt</option>
+            <option value="laptop">Laptop</option>
+            <option value="handheld">Handheld</option>
+            <option value="custom_built_by_others">Custom Built by Others</option>
+        </select>
 
-<div id="partsListDisplay"></div>
+        <button id="generateParts">Generate Parts List</button>
+
+        <div id="partsList" style="margin-top: 20px;"></div>
+    </div>
+
+    <footer>
+        &copy; 2024 PC Parts Generator. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
