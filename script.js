@@ -1,4 +1,4 @@
-document.getElementById('generateParts').addEventListener('click', function () {
+function generateParts() {
     const currency = document.getElementById('currency').value;
     const budget = parseInt(document.getElementById('budget').value);
     const usage = document.getElementById('usage').value;
