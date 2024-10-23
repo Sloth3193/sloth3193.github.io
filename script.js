@@ -35,7 +35,7 @@ document.getElementById('generateParts').addEventListener('click', function () {
         }
     } 
     // Budget (£200-500) builds
-    else if (budget <= 500) {
+    else if (budget > 200 && budget <= 500) {
         partsList = 'Budget Build: ';
         if (buildType === 'custom') {
             if (usage === 'gaming') {
@@ -117,3 +117,6 @@ document.getElementById('generateParts').addEventListener('click', function () {
             partsList += 'Gaming Laptop (e.g. Asus ROG with Ryzen 9 5900H and RTX 3070)';
         } else if (buildType === 'handheld') {
             partsList += 'Aya Neo 2021 or other high-performance handhelds';
+        } else if (buildType === 'custom_built_by_others') {
+            partsList += 'Custom high-end build assembled by others: Ryzen 7 5800X, RTX 3060 Ti';
+        }
