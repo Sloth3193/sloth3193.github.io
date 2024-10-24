@@ -1,62 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Parts List Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Build Finder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Find Your PC Build</h1>
+    <p>Enter your budget and get custom PC build suggestions.</p>
 
-    <div class="container">
-        <h1>PC Parts List Generator</h1>
-        
-        <label for="currency">Select Currency:</label>
-        <select id="currency">
-            <option value="USD">$ - US Dollar</option>
-            <option value="GBP">£ - British Pound</option>
-            <option value="EUR">€ - Euro</option>
-            <option value="JPY">¥ - Japanese Yen</option>
-        </select>
-
-        <label for="budget">Enter Budget:</label>
-        <input type="number" id="budget" placeholder="Enter your budget" required>
-
-        <label for="usage">What is your main usage?</label>
-        <select id="usage">
-            <option value="gaming">Gaming</option>
-            <option value="videoEditing">Video Editing</option>
-            <option value="programming">Programming</option>
-            <option value="generalUse">General Use</option>
-        </select>
-
-        <label for="preference">CPU Preference:</label>
-        <select id="preference">
-            <option value="amd">AMD</option>
-            <option value="amd_am5">AMD (AM5)</option>
-            <option value="intel">Intel</option>
-        </select>
-
-        <label for="buildType">Select Build Type:</label>
-        <select id="buildType">
-            <option value="custom">Custom Build</option>
-            <option value="prebuilt">Prebuilt</option>
-            <option value="laptop">Laptop</option>
-            <option value="handheld">Handheld</option>
-            <option value="custom_built_by_others">Custom Built by Others</option>
-        </select>
-
-        <button id="generateParts">Generate Parts List</button>
-
-        <div id="partsList" style="margin-top: 20px;"></div>
+    <div class="search-bar">
+      <input type="number" id="budgetInput" placeholder="Enter your budget ($)" />
+      <button onclick="getBuilds()">Search</button>
     </div>
 
-    <footer>
-        &copy; 2024 PC Parts Generator. All rights reserved.
-    </footer>
+    <div id="buildsContainer" class="builds-container"></div>
+  </div>
 
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
