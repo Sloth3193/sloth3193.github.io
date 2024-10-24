@@ -1,7 +1,7 @@
 const pcBuilds = [
   {
     budget: 500,
-    parts: ['CPU: Intel i3', 'GPU: GTX 1050', 'RAM: 8GB DDR4', 'Storage: 256GB SSD'],
+    parts: ['CPU: AMD Ryzen 5 5500','CPU COOLER: Coolermaster 212 Hyper Black', 'MOTHERBOARD: MSI B550 Gaming Gen 3','GPU: AMD Radeon RX 6600xt', 'RAM: Corsair Vengeance LPX 16 GB', 'PSU: MSI MAG A650BN'],
   },
   {
     budget: 1000,
