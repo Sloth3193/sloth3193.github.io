@@ -1,71 +1,86 @@
-/* Set dark background and light text for the whole page */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #1e1e1e; /* Dark gray background */
-    color: #e0e0e0; /* Light gray text */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: sans-serif; /* default sans-serif font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
 }
 
-/* Style for the container holding the form */
 .container {
-    width: 90%;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #2b2b2b; /* Slightly lighter gray */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Form heading */
 h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-/* Label for form elements */
-label {
-    font-size: 16px;
-    display: block;
-    margin: 10px 0 5px;
-    color: #c0c0c0;
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-/* Input fields and dropdowns */
-input[type="number"], select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 20px;
-    background-color: #3a3a3a; /* Darker input field */
-    border: 1px solid #444; /* Border for inputs */
-    color: #fff;
-    border-radius: 5px;
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
-/* Buttons */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #008cba; /* Bright blue for call to action */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #005f5f; /* Darker shade for hover */
+.search-bar button:hover {
+  background-color: #0056b3;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 12px;
-    color: #a0a0a0;
+.builds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.build-card {
+  background-color: #f9f9f9;
+  width: 80%;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.build-card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.build-card button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
